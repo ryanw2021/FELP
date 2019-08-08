@@ -3,10 +3,9 @@ function credentialsSubmitted() {
     var submittedEmail = document.getElementById('email-input').value;
     var submittedPassword = document.getElementById('password-input').value;
     if(submittedEmail != "" && submittedPassword != "") {
-        console.log(submittedEmail);
-        console.log(submittedPassword);
+        //Do Something!!!!
     }
     else {
-        document.getElementById('invalid-inputs').innerHTML='Please enter a valid username and password.';
+        document.getElementById('invalid-inputs').innerHTML='Please enter a valid email and password.';
     }
 }

@@ -8,23 +8,38 @@ body {
  	background-color: #b4f6fa;
 }
 
-
 div#login-inputs {
     position:absolute;
-    top:30%;
+    top:20%;
     right:0;
     left:0;
 }
 
+input#first-name-input {
+    margin-bottom: 1%;
+}
+
+input#last-name-input {
+    margin-bottom: 1%;
+}
+
+input#confirm-password-input {
+    margin-bottom: 1%;
+}
+
 input#password-input {
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 img#felp-logo {
-    margin-bottom: 2%;
+    margin-bottom: 1%;
 }
 
-label#invalid-inputs {
+input#tos-checkbox {
+    margin-bottom: 1%;
+}
+
+a#invalid-inputs {
     background-color: #f5817f;
 }
