@@ -124,3 +124,28 @@ input#tos-checkbox {
 a#invalid-inputs {
   background-color: #f5817f;
 }
+
+
+
+div#customer-profile-page {
+  position:absolute;
+  top:35%;
+  right:0;
+  left:0;
+  text-align: center;
+}
+
+label#customer-name-profile-page {
+  font-size: 60pt;
+}
+
+label#customer-email-profile-page {
+  font-size: 30pt;
+}
+
+div#new-favorite-organization-div {
+  position:absolute;
+  top:15%;
+  right:50%;
+  left:0;
+}
