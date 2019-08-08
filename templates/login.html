@@ -1,23 +1,19 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Login</title>
-    <link href="../static/main.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id='login-inputs' style="text-align:center; vertical-align:middle">
-      <form>
-            <img src='../static/Felp.png' id='felp-logo'/><br>
-        <input type='text' placeholder="Email Address" id="email-input"/><br>
-        <input type='password' placeholder="Password" id="password-input"/><br>
-        <button type='button' onClick='credentialsSubmitted()'>Login</button>
-      </form>
-      <p>Don't have an account? Create one 
-            <a href="newAccount.html">here!</a>
-      </p>
-      <label id='invalid-inputs'></label>
-    </div>
+{% extends "layout.html" %}
+{% block content %}
+<body>
+  <div id='login-inputs' style="text-align:center; vertical-align:middle">
+    <form>
+          <img src='../static/Felp.png' id='felp-logo'/><br>
+      <input type='text' placeholder="Email Address" id="email-input"/><br>
+      <input type='password' placeholder="Password" id="password-input"/><br>
+      <button type='button' onClick='credentialsSubmitted()'>Login</button>
+    </form>
+    <p>Don't have an account? Create one 
+          <a href="newAccount.html">here!</a>
+    </p>
+    <label id='invalid-inputs'></label>
+  </div>
 
-    <script src="../static/login.js"></script>
-  </body>
-</html>
+  <script src="../static/login.js"></script>
+</body>
+{% endblock content %}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Login</title>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+        Organization Search: <datalist id="suggestions">
+            <!-- USE JAVASCRIPT TO ADD ALL EXISTING ORGANIZATIONS TO THE DROPDOWN -->
+            <option>First option</option>
+            <option>Second Option</option>
+        </datalist>
+        <input  autoComplete="on" list="suggestions"/> 
+        <button type='button' onClick='credentialsSubmitted()'>Add Organization</button>
+    </div>
+    <script src="../static/customerProfile.js"></script>
+  </body>
+</html>

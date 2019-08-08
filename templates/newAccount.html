@@ -1,25 +1,18 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Create Account</title>
-    <link href="../static/main.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id='login-inputs' style="text-align:center; vertical-align:middle">
-      <form>
-        <img src='../static/Felp.png' id='felp-logo'/><br>
-        <input type='text' placeholder="First Name" id='first-name-input'/><br>
-        <input type='text' placeholder="Last Name" id='last-name-input'/><br>
-        <input type='text' placeholder="Email Address" id="email-input"/><br>
-        <input type='password' placeholder="Password" id="password-input"/><br>
-        <input type='password' placeholder="Confirm Password" id="confirm-password-input"/><br>
-        <input type="checkbox" id="tos-checkbox">I have read and agree to our terms of service</input><br>
-        <button type='button' onClick='createAccount()'>Create Account</button> 
-      </form>
-      <br>
-      <a id='invalid-inputs'></label>
-    </div>
-
-    <script src="../static/newAccount.js"></script>
-  </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<div id='login-inputs' style="text-align:center; vertical-align:middle">
+  <form>
+    <img src='../static/Felp.png' id='felp-logo'/><br>
+    <input type='text' placeholder="First Name" id='first-name-input'/><br>
+    <input type='text' placeholder="Last Name" id='last-name-input'/><br>
+    <input type='text' placeholder="Email Address" id="email-input"/><br>
+    <input type='password' placeholder="Password" id="password-input"/><br>
+    <input type='password' placeholder="Confirm Password" id="confirm-password-input"/><br>
+    <input type="checkbox" id="tos-checkbox">I have read and agree to our terms of service</input><br>
+    <button type='button' onClick='createAccount()'>Create Account</button> 
+  </form>
+  <br>
+  <a id='invalid-inputs'></label>
+</div>
+<script src="../static/newAccount.js"></script>
+{% endblock content %}
