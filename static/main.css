@@ -1,6 +1,68 @@
-#navbar li {
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  background-color: #f1f1f1;
+  float: right;
+
+}
+
+#navbar li a {
+  display: block;
+  color: #000;
+  padding: 8px 4px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+#navbar li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: white;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: gray;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#events li {
 	list-style-type: none;
   	margin: 0;
-  	padding: 0;
-  	color: blue;
+  	padding: 100;
+  	width: 600px;
+  	background-color: #ADD8E6;
+  	border-bottom: 1px solid black;
+
 }
