@@ -40,8 +40,8 @@ class Fundraiser(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     business_id = db.Column(db.Integer, db.ForeignKey('business.id'), nullable=False)
     organization_id = db.Column(db.Integer, db.ForeignKey('organization.id'), nullable=False)
-    start_date = db.Column(db.Datetime)
-    end_date = db.Column(db.Datetime)
+    start_date = db.Column(db.DateTime)
+    end_date = db.Column(db.DateTime)
 
 @app.route("/")
 def index():

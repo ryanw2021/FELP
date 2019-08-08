@@ -1,17 +1,18 @@
-from app import User
+from app import db, User
+import datetime as date
 
 lst = []
-
-Bob = User("bob@gmail.com", "password", "Bob Smith")
-John = User("John@gmail.com", "password", "John Rogers")
-Fred = User("fred@gmail.com", "password", "Fred O'Reily")
-Sara = User("sara@gmail.com", "password", "Sara George")
-Madeline = User("madeline@gmail.com", "password", "Madeline Cohen")
-Connor = User("connor@gmail.com", "password", "Connor George")
-Ryan = User("Ryan@gmail.com", "password", "Ryan Cohen")
-Jeff = User("jeff@gmail.com", "password", "Jeff Smith")
-Abby = User("abby@gmail.com", "password", "Abby Pennsly")
-Kyra = User("kyra@gmail.com", "password", "Kyra Mccable")
+'''
+Bob = User(email="bob@gmail.com", password="password", name="Bob Smith")
+John = User(email="John@gmail.com", password="password", name="John Rogers")
+Fred = User(email="fred@gmail.com", password="password", name="Fred O'Reily")
+Sara = User(email="sara@gmail.com", password="password", name="Sara George")
+Madeline = User(email="madeline@gmail.com", password="password", name="Madeline Cohen")
+Connor = User(email="connor@gmail.com", password="password", name="Connor George")
+Ryan = User(email="Ryan@gmail.com", password="password", name="Ryan Cohen")
+Jeff = User(email="jeff@gmail.com", password="password", name="Jeff Smith")
+Abby = User(email="abby@gmail.com", password="password", name="Abby Pennsly")
+Kyra = User(email="kyra@gmail.com", password="password", name="Kyra Mccable")
 
 lst.append(Bob)
 lst.append(John)
@@ -30,4 +31,7 @@ for name in lst:
 	db.session.add(name)
 	print("Added!")
 db.session.commit()
+print("Finished")
+'''
+
 
