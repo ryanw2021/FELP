@@ -40,13 +40,13 @@
 /* Control the left side */
 .left {
   left: 0;
-  background-color: white;
+  background-color: #b4f6fa;;
 }
 
 /* Control the right side */
 .right {
   right: 0;
-  background-color: gray;
+  background-color: white;
 }
 
 .centered {
@@ -58,11 +58,18 @@
 }
 
 #events li {
-	list-style-type: none;
+	 list-style-type: none;
   	margin: 0;
   	padding: 100;
   	width: 600px;
   	background-color: #ADD8E6;
   	border-bottom: 1px solid black;
 
+}
+
+.single_event img {
+   height: 80px !important; 
+   width: auto !important;
+   vertical-align: middle;
+   padding: 20px;
 }
