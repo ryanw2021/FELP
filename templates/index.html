@@ -1,6 +1,6 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="../static/main.css">
+  <link rel="stylesheet" type="text/css" href=".{{url_for('static', filename='main.css')}}">
 </head>
     <title>Welcome to Felp!</title>
 
@@ -9,12 +9,19 @@
 
  			 <div class="centered">
     			<ul id="events">
-    				Welcome to Felp!
+    				
 
-    				<li class = "single_event"> 
-    				Chipotle Fundraiser
+    				<!-- <li class = "single_event"> 
     				<img src="https://www.fnasafety.com/wp-content/uploads/2018/10/chipotle-mexican-grill-logo-png-transparent.png">
-    				</li>
+
+    				Chipotle Fundraiser 
+    				<p class ="description"> A description of the event</p>
+
+    				<p class ="time"> Time of the event</p>
+
+
+
+    				</li> -->
     		</ul>
   			</div>
 		</div>
@@ -35,6 +42,10 @@
 		</div>
 
 
-<!-- <script src="../static/index.js"></script> -->
+<script src="../static/index.js"></script>
+<!-- Replace the value of the key parameter with your own API key. -->
+<!-- <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk&callback=initMap">
+</script> -->
     
 </html>
