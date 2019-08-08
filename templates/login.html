@@ -10,11 +10,15 @@
             <img src='../static/Felp.png' id='felp-logo'/><br>
         <input type='text' placeholder="Email Address" id="email-input"/><br>
         <input type='password' placeholder="Password" id="password-input"/><br>
-        <input type='submit' value='Login'/>
+        <!-- <input type='submit' value='Login' onclick="credentialsSubmitted()"/> -->
+        <button type='button' onClick='credentialsSubmitted()'>Submit</button>
       </form>
       <p>Don't have an account? Create one 
             <a href="https://www.google.com/">here!</a>
       </p>
+      <label id='invalid-inputs'></label>
     </div>
+
+    <script src="../static/login.js"></script>
   </body>
 </html>

@@ -27,3 +27,7 @@ input#password-input {
 img#felp-logo {
     margin-bottom: 2%;
 }
+
+label#invalid-inputs {
+    background-color: #f5817f;
+}
