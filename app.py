@@ -33,13 +33,14 @@ class Organization(db.Model):
 class Business(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(), unique=True, nullable=False)
-    location = db.Column(db.String(), unique=True, nullable=False)
+    address = db.Column(db.String(), unique=True, nullable=False)
     business = db.relationship('Fundraiser', backref='business', lazy=True)
 
 class Fundraiser(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     business_id = db.Column(db.Integer, db.ForeignKey('business.id'), nullable=False)
     organization_id = db.Column(db.Integer, db.ForeignKey('organization.id'), nullable=False)
+    description = db.Column(db.String(), unique=True, nullable=False)
     start_date = db.Column(db.DateTime)
     end_date = db.Column(db.DateTime)
 
@@ -57,7 +58,9 @@ def newAccount():
 
 @app.route("/customerProfile")
 def customerProfile():
-    return render_template("customerProfile.html")
+    user = User.query.filter_by(name="Bob Smith").first()
+    print(user.name)
+    return render_template("customerProfile.html", user=user)
 
 if __name__=='__main__':
     app.run(debug=True)
