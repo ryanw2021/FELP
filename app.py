@@ -47,9 +47,13 @@ class Fundraiser(db.Model):
 def index():
     return render_template("index.html")
 
-@app.route("/login.html")
+@app.route("/login")
 def login():
     return render_template("login.html")
+
+@app.route("/newAccount")
+def newAccount():
+    return render_template("newAccount.html")
 
 if __name__=='__main__':
     app.run(debug=True)
