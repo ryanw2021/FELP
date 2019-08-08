@@ -55,5 +55,9 @@ def login():
 def newAccount():
     return render_template("newAccount.html")
 
+@app.route("/customerProfile")
+def customerProfile():
+    return render_template("customerProfile.html")
+
 if __name__=='__main__':
     app.run(debug=True)
