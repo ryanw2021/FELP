@@ -2,11 +2,15 @@
 {% block content %}
 <body>
   <div id='login-inputs' style="text-align:center; vertical-align:middle">
-    <form>
-          <img src='../static/Felp.png' id='felp-logo'/><br>
-      <input type='text' placeholder="Email Address" id="email-input"/><br>
-      <input type='password' placeholder="Password" id="password-input"/><br>
-      <button type='button' onClick='credentialsSubmitted()'>Login</button>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <img src='../static/Felp.png' id='felp-logo'/><br>
+    
+    <form action="{{ url_for('login2') }}" method="POST">  
+      <input type='text' name="email" placeholder="Email" id="email-input"/><br>
+      <input type='password' name="password" placeholder="Password" id="password-input"/><br>
+      <button type='submit'>Login</button>
     </form>
     <p>Don't have an account? Create one 
           <a href="newAccount">here!</a>
