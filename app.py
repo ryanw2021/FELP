@@ -69,7 +69,8 @@ def newAccount():
 def customerProfile():
     user = User.query.filter_by(name="Bob Smith").first()
     organizations = Organization.query.order_by(Organization.title).all()
-    return render_template("customerProfile.html", user=user, organizations=organizations)
+    follows = Follows.query.filter_by(user_id=user.id).order_by(Follows.organization_id).all()
+    return render_template("customerProfile.html", user=user, organizations=organizations, follows=follows)
 
 if __name__=='__main__':
     app.run(debug=True)

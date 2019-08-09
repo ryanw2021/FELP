@@ -1,4 +1,4 @@
-from app import db, User, Business, Organization, Fundraiser
+from app import db, User, Business, Organization, Fundraiser, Follows
 import datetime as date
 
 # Creates rows for User Table
@@ -118,9 +118,31 @@ db.session.commit()
 print("Finished")
 '''
 
+# Creates rows for Follow Table
+'''
 
+'''
+lst5 = []
+bobfollows1 = Follows(user_id = 1, organization_id=1)
+bobfollows2 = Follows(user_id = 1, organization_id=2)
+bobfollows3 = Follows(user_id = 1, organization_id=3)
+bobfollows4 = Follows(user_id = 1, organization_id=4)
+bobfollows5 = Follows(user_id = 1, organization_id=5)
+bobfollows6 = Follows(user_id = 1, organization_id=6)
+bobfollows7 = Follows(user_id = 1, organization_id=7)
+bobfollows9 = Follows(user_id = 1, organization_id=9)
 
+lst5.append(bobfollows1)
+lst5.append(bobfollows2)
+lst5.append(bobfollows3)
+lst5.append(bobfollows4)
+lst5.append(bobfollows5)
+lst5.append(bobfollows6)
+lst5.append(bobfollows7)
+lst5.append(bobfollows9)
 
-
-
-
+for name in lst5:
+	db.session.add(name)
+	print("Added")
+db.session.commit()
+print("Finished")
