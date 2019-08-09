@@ -3,12 +3,12 @@
 //List email
 
 function addNewFavorite() {
-    selectedOrganization = document.getElementById('selected-organization').value
+    var selectedOrganization = document.getElementById('organization-selector').value;
     console.log(selectedOrganization);
 }
 
 function populateNewOrganizationList() {
-    
+
 }
 
 function test(){
