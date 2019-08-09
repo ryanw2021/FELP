@@ -35,10 +35,6 @@ li#navbar-list {
   color: white;
 }
 
-a#navbar-link {
-  
-}
-
 .split {
   height: 93.9%;
   width: 50%;
@@ -64,7 +60,7 @@ a#navbar-link {
 
 .centered {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -171,27 +167,8 @@ div#new-favorite-organization-div {
   margin-left: 5%
 }
 
-ul#events {
-  
-}
-
 li#event-holder { 
+  padding: 10px;
   text-align: left;
-  background-color: #4CAF50;
-}
-
-h1#home-page-business-name{
-
-}
-
-h2#home-page-hosted-by {
-
-}
-
-h3#home-page-address {
-
-}
-
-p#home-page-description {
-  
+  background-color: #6cc1c4;
 }
