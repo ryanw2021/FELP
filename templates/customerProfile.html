@@ -3,28 +3,36 @@
 <body>
     <div class='split left'>
         <div id='customer-profile-page'>
-            <label id="customer-name-profile-page">{{ user.name }}</label><br>
+            <label id="customer-name-profile-page"><strong>{{ user.name }}</strong></label><br>
             <label id="customer-email-profile-page">{{ user.email }}</label>
         </div>
     </div>
     <div class='split right'>
             <div id='new-favorite-organization-div'>
                 <div>
-                    Organization Search: <datalist id="options">
-                        <option><a href="javascript:test()">first option</a></option>
+                <!-- <input autoComplete="on" list="options" id="selected-organization"/> 
+                <div>
+                    Organization Search:<datalist id="options">
+                        {% for organization in organizations %}
+                        <option value={{organization.id}}>{{ organization.title }}</option>
+                        {% endfor %}
+                        <option>first option</option>
                         <option>Second Option</option>
-                    </datalist>
+                    </datalist> -->
+
+                    <select id='organization-selector'>
+                            {% for organization in organizations %}
+                            <option value={{organization.id}}>{{ organization.title }}</option>
+                            {% endfor %}
+                    </select>
                 </div>
-                <input  autoComplete="on" list="options" id="selectedOrg"/> 
                 <button type='button' onClick='addNewFavorite()'>Add Organization</button>
                 <ul id="favorites-list">
                     <li>
                         <label>company name</label>
                     </li>                                                                                                               
                 </ul>
-                {% for organization in organizations %}
-                <h1>{{ organization.title }}</h1>
-                {% endfor %}
+                
             </div>
     </div>
     <script src="../static/customerProfile.js"></script>
