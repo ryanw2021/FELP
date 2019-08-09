@@ -8,27 +8,26 @@
         </div>
     </div>
     <div class='split right'>
-            <div id='new-favorite-organization-div'>
-                <div>
-                    <select id='organization-selector'>
-                            <option disabled selected hidden>Find New Organization</option>
-                            {% for organization in organizations %}
-                            <option value={{organization.id}}>{{ organization.title }}</option>
-                            {% endfor %}
-                    </select>
-                </div>
-                <br/>
+		<div id='new-favorite-organization-div'>
+			<div>
+				<select id='organization-selector'>
+					<option disabled selected hidden>Find New Organization</option>
+					{% for organization in organizations %}
+					<option value={{organization.id}}>{{ organization.title }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			<br/>
 
-                <button type='button' onClick='addNewFavorite()'>Add Selected Organization</button>
-                <h3>Favorite Organizations:</h3>
-                <ul>
-                    {% for follow in follows %}
-                    <li>{{ follow.organization.title }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <img src="../static/Felp_transparent.png" id="transparent-logo"/>
+			<button type='button' onClick='addNewFavorite()'>Add Selected Organization</button>
+			<h3>Favorite Organizations:</h3>
+			<ul>
+				{% for follow in follows %}
+				<li>{{ follow.organization.title }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<img src="../static/Felp_transparent.png" id="transparent-logo"/>
     </div>
-    <script src="../static/customerProfile.js"></script>
 </body>
 {% endblock content %}

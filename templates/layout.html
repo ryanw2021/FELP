@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<!-- Has all thw shared html across the pages -->
-
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 </head>
 
 <body>
-	<!-- Put nav bar here-->
 	<ul id="navbar">
 		<li id='navbar-list'><a href="/" id=navbar-link>Home</a></li>
 		{% if current_user.is_authenticated %}
