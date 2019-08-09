@@ -3,11 +3,11 @@
 <div id='login-inputs' style="text-align:center; vertical-align:middle">
   <form action = "{{ url_for('newAccount') }}" method="POST">
     <img src='../static/Felp.png' id='felp-logo'/><br>
-    <input type='text' name='fname' placeholder="First Name"/><br><br>
-    <input type='text' name='lname' placeholder="Last Name"/><br><br>
-    <input type='text' name='email' placeholder="Email Address"/><br><br>
-    <input type='password' name='password'placeholder="Password"/><br><br>
-    <button type='submit'>Create Account</button> 
+    <input type='text' name='fname' placeholder="First Name" id="text-input"/><br>
+    <input type='text' name='lname' placeholder="Last Name" id="text-input"/><br>
+    <input type='text' name='email' placeholder="Email Address" id="text-input"/><br>
+    <input type='password' name='password'placeholder="Password" id="text-input"/><br>
+    <button type='submit' id="buttons">Create Account</button> 
   </form>
   <br>
   {% if message %}
