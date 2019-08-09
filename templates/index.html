@@ -37,6 +37,7 @@
 		</div>
 
 		<div class="split right">
+        <img src="../static/Felp_transparent.png" id='transparent-logo'/>
   			<div class="centered">
     		<h2 style="font-size: 50px; padding-top: 140px">Look for fundraisers below!</h2>
 
@@ -85,7 +86,7 @@
             var marker1 = new google.maps.Marker({
               position: pos,
               map: map,
-              title: 'Hello World!'
+              title: 'Current Location'
           });
             var pos2 = {
               lat: 38.8808432,
@@ -94,7 +95,17 @@
             var marker2 = new google.maps.Marker({
               position: pos2,
               map: map,
-              title: 'Hello World!'
+              title: 'Chipotle'
+          });
+
+            var pos3 = {
+              lat: 38.8808433,
+              lng: -77.1161041
+            }
+            var marker3 = new google.maps.Marker({
+              position: pos3,
+              map: map,
+              title: 'Cava'
           });
 
 
