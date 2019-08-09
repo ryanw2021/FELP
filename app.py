@@ -65,7 +65,7 @@ def index():
 
     print(lib)
 
-    return render_template("index.html", fundraisers = fundraisers)
+    return render_template("index.html", fundraisers = fundraisers, addresses=lib)
 
 @app.route("/login")
 def login():
