@@ -2,7 +2,7 @@
 {% block content %}
 		<div class="split left">
             
- 			 <div class="centered">
+ 			 <div class="Hcentered">
                   
     			<ul id="events">
     				
@@ -21,10 +21,13 @@
                     </li> -->
                     
                     {% for fundraiser in fundraisers %}
-                    <h1>{{ fundraiser.business.location}}</h1>
-                    <h2>Hosted by: {{ fundraiser.organization.title }}</h2>
-                    <h3>{{ fundraiser.business.address }}</h3>
-                    <p>Deal: {{ fundraiser.description }}</p>
+					<li id='event-holder'>
+						<h1 id='home-page-buiness-name'>{{ fundraiser.business.title }}</h1>
+						<h2 id='home-page-hosted-by'>Hosted by: {{ fundraiser.organization.title }}</h2>
+						<h3 id='home-page-address'>{{ fundraiser.business.address }}</h3>
+						<p id=home-page-description>Deal: {{ fundraiser.description }}</p>
+					</li>
+					<br>
                     {% endfor %}
     		</ul>
         
