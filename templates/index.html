@@ -39,7 +39,6 @@
 		<div class="split right">
   			<div class="centered">
     		<h2 style="font-size: 50px; padding-top: 140px">Look for fundraisers below!</h2>
-    		<p>Click on a business for more information.</p>
 
             <div id="map" style="width: 500px; height: 400px; padding: 80px"></div>
             </div>
@@ -66,6 +65,8 @@
 
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
+           
+            
 
             
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -74,11 +75,30 @@
               lng: position.coords.longitude
             };
 
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
             map.setCenter(pos);
-            //var markersArray = [];
+            var marker1 = new google.maps.Marker({
+              position: pos,
+              map: map,
+              title: 'Hello World!'
+          });
+            var pos2 = {
+              lat: 38.8808432,
+              lng: -77.1161042
+            }
+            var marker2 = new google.maps.Marker({
+              position: pos2,
+              map: map,
+              title: 'Hello World!'
+          });
+
+
+            
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -105,6 +125,7 @@
 
   			</div>
 		</div>
+
 
 
 <!-- <script src="../static/index.js"></script> -->
