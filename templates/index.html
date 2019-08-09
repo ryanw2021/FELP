@@ -18,7 +18,14 @@
 
 
 
-    				</li> -->
+                    </li> -->
+                    
+                    {% for fundraiser in fundraisers %}
+                    <h1>{{ fundraiser.business.title }}</h1>
+                    <h2>Hosted by: {{ fundraiser.organization.title }}</h2>
+                    <h3>{{ fundraiser.business.address }}</h3>
+                    <p>Deal: {{ fundraiser.description }}</p>
+                    {% endfor %}
     		</ul>
         
   			</div>

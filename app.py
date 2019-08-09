@@ -24,29 +24,38 @@ class User(db.Model):
     email = db.Column(db.String(), unique=True, nullable=False)
     password = db.Column(db.String(), nullable=False)
     name = db.Column(db.String(), nullable=False)
+    following = db.relationship('Follows', backref='user', lazy = True)
 
 class Organization(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(), unique=True, nullable=False)
     fundraisers = db.relationship('Fundraiser', backref='organization', lazy=True)
+    followers = db.relationship('Follows', backref='organization', lazy = True)
 
 class Business(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(), unique=True, nullable=False)
     address = db.Column(db.String(), unique=True, nullable=False)
-    business = db.relationship('Fundraiser', backref='business', lazy=True)
+    fundraisers = db.relationship('Fundraiser', backref='business', lazy=True)
 
 class Fundraiser(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     business_id = db.Column(db.Integer, db.ForeignKey('business.id'), nullable=False)
     organization_id = db.Column(db.Integer, db.ForeignKey('organization.id'), nullable=False)
-    description = db.Column(db.String(), unique=True, nullable=False)
+    description = db.Column(db.String(), nullable=False)
     start_date = db.Column(db.DateTime)
     end_date = db.Column(db.DateTime)
+    
+class Follows(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    organization_id = db.Column(db.Integer, db.ForeignKey('organization.id'), nullable=False)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    fundraisers = Fundraiser.query.order_by(Fundraiser.start_date).all()
+    print(fundraisers)
+    return render_template("index.html", fundraisers = fundraisers)
 
 @app.route("/login")
 def login():
