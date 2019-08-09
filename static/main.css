@@ -175,3 +175,9 @@ li#event-holder:hover {
   transition: all .2s ease-in-out;
   transform: scale(1.05);
 }
+
+img#transparent-logo{
+  position: absolute;
+  bottom: 0.5%;
+  right: 1%;
+}
