@@ -54,7 +54,12 @@ class Follows(db.Model):
 @app.route("/")
 def index():
     fundraisers = Fundraiser.query.order_by(Fundraiser.start_date).all()
-    print(fundraisers)
+    lib = {}
+    for fund in fundraisers:
+        lib[fund.business.title] = fund.business.address
+
+    print(lib)
+
     return render_template("index.html", fundraisers = fundraisers)
 
 @app.route("/login")
