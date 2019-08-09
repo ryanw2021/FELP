@@ -57,6 +57,13 @@
   text-align: center;
 }
 
+.Hcentered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+}
+
 #events li {
 	 list-style-type: none;
   	margin: 0;
@@ -149,4 +156,29 @@ div#new-favorite-organization-div {
   right:0;
   left:0;
   margin-left: 5%
+}
+
+ul#events {
+  
+}
+
+li#event-holder { 
+  text-align: left;
+  background-color: #4CAF50;
+}
+
+h1#home-page-business-name{
+
+}
+
+h2#home-page-hosted-by {
+
+}
+
+h3#home-page-address {
+
+}
+
+p#home-page-description {
+  
 }

@@ -27,17 +27,11 @@
                     </select>
                 </div>
                 <button type='button' onClick='addNewFavorite()'>Add Organization</button>
-                <ul id="favorites-list">
-                    <li>
-                        <label>company name</label>
-                    </li>                                                                                                               
-                </ul>
-                
-                <h3>Organizations:</h3>
+                <h3>Favorite Organizations:</h3>
                 <ul>
-                {% for follow in follows %}
-                <li>{{ follow.organization.title }}</li>
-                {% endfor %}
+                    {% for follow in follows %}
+                    <li>{{ follow.organization.title }}</li>
+                    {% endfor %}
                 </ul>
             </div>
     </div>
