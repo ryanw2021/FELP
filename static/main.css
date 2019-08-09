@@ -145,7 +145,8 @@ label#customer-email-profile-page {
 
 div#new-favorite-organization-div {
   position:absolute;
-  top:15%;
-  right:50%;
+  top:5%;
+  right:0;
   left:0;
+  margin-left: 5%
 }

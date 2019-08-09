@@ -3,23 +3,26 @@
 <body>
     <div class='split left'>
         <div id='customer-profile-page'>
-            <label id="customer-name-profile-page"><strong>{{ user.name }}</strong></label><br>
+            <label id="customer-name-profile-page">{{ user.name }}</label><br>
             <label id="customer-email-profile-page">{{ user.email }}</label>
         </div>
     </div>
     <div class='split right'>
             <div id='new-favorite-organization-div'>
-                Organization Search: <datalist id="suggestions">
-                    <!-- USE JAVASCRIPT TO ADD ALL EXISTING ORGANIZATIONS TO THE DROPDOWN -->
-                    <option>First option</option>
-                    <option>Second Option</option>
-                </datalist>
-                <input  autoComplete="on" list="suggestions"/> 
-                <button type='button' onClick='credentialsSubmitted()'>Add Organization</button>
+                <div>
+                    Organization Search: <datalist id="options">
+                        <option><a href="javascript:test()">first option</a></option>
+                        <option>Second Option</option>
+                    </datalist>
+                </div>
+                <input  autoComplete="on" list="options" id="selectedOrg"/> 
+                <button type='button' onClick='addNewFavorite()'>Add Organization</button>
+                <ul id="favorites-list">
+                    <li>
+                        <label>company name</label>
+                    </li>                                                                                                               
+                </ul>
             </div>
-        <div id='favorites-div-profile-page'>
-            <label>pppp</label>
-        </div>
     </div>
     <script src="../static/customerProfile.js"></script>
 </body>
