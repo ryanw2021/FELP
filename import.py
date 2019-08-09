@@ -104,6 +104,10 @@ cavafund4 = Fundraiser(business_id="19", organization_id="4", start_date=date.da
 ambarClaredonfund6 = Fundraiser(business_id="20", organization_id="6", start_date=date.datetime(2019,10,5), end_date=date.datetime(2019,10,6), description="50 percent towards organzation")
 libertyTavernfund7 = Fundraiser(business_id="21", organization_id="7", start_date=date.datetime(2019,10,10), end_date=date.datetime(2019,10,10), description="50 percent towards organzation")
 
+chipotlefund2 = Fundraiser(business_id="16",organization_id="7", start_date=date.datetime(2019,8,8), end_date=date.datetime(2019,8,9), description="25 percent towards organzation")
+db.session.add(chipotlefund2)
+db.session.commit()
+
 lst4.append(chipotlefund1)
 lst4.append(mcdonaldsfund2)
 lst4.append(cheesecakeFactoryfund3)
@@ -120,9 +124,6 @@ print("Finished")
 
 # Creates rows for Follow Table
 '''
-
-'''
-lst5 = []
 bobfollows1 = Follows(user_id = 1, organization_id=1)
 bobfollows2 = Follows(user_id = 1, organization_id=2)
 bobfollows3 = Follows(user_id = 1, organization_id=3)
@@ -132,6 +133,7 @@ bobfollows6 = Follows(user_id = 1, organization_id=6)
 bobfollows7 = Follows(user_id = 1, organization_id=7)
 bobfollows9 = Follows(user_id = 1, organization_id=9)
 
+lst5 = []
 lst5.append(bobfollows1)
 lst5.append(bobfollows2)
 lst5.append(bobfollows3)
@@ -146,3 +148,4 @@ for name in lst5:
 	print("Added")
 db.session.commit()
 print("Finished")
+'''

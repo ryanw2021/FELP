@@ -3,44 +3,32 @@
 <body>
     <div class='split left'>
         <div id='customer-profile-page'>
-            <label id="customer-name-profile-page"><strong>{{ user.name }}</strong></label><br>
-            <label id="customer-email-profile-page">{{ user.email }}</label>
+            <label id="customer-name-profile-page"><strong>{{ current_user.name }}</strong></label><br>
+            <label id="customer-email-profile-page">{{ current_user.email }}</label>
         </div>
     </div>
     <div class='split right'>
             <div id='new-favorite-organization-div'>
                 <div>
-                <!-- <input autoComplete="on" list="options" id="selected-organization"/> 
-                <div>
-                    Organization Search:<datalist id="options">
-                        {% for organization in organizations %}
-                        <option value={{organization.id}}>{{ organization.title }}</option>
-                        {% endfor %}
-                        <option>first option</option>
-                        <option>Second Option</option>
-                    </datalist> -->
-
                     <select id='organization-selector'>
+                            <option disabled selected hidden>Find New Organization</option>
                             {% for organization in organizations %}
                             <option value={{organization.id}}>{{ organization.title }}</option>
                             {% endfor %}
                     </select>
                 </div>
-                <button type='button' onClick='addNewFavorite()'>Add Organization</button>
-                <ul id="favorites-list">
-                    <li>
-                        <label>company name</label>
-                    </li>                                                                                                               
-                </ul>
-                
-                <h3>Organizations:</h3>
+                <br/>
+
+                <button type='button' onClick='addNewFavorite()'>Add Selected Organization</button>
+                <h3>Favorite Organizations:</h3>
                 <ul>
-                {% for follow in follows %}
-                <li>{{ follow.organization.title }}</li>
-                {% endfor %}
+                    {% for follow in follows %}
+                    <li>{{ follow.organization.title }}</li>
+                    {% endfor %}
                 </ul>
             </div>
+            <img src="../static/Felp_transparent.png" id="transparent-logo"/>
     </div>
     <script src="../static/customerProfile.js"></script>
 </body>
-  {% endblock content %}
+{% endblock content %}

@@ -9,10 +9,15 @@
 <body>
 	<!-- Put nav bar here-->
 	<ul id="navbar">
-		<li><a href="/">Home</a></li>
-		<li><a href="/customerProfile">Profile</a></li>
-		<li><a href="/login">Login</a></li>
-		<li><a href="/newAccount">New Account</a></li>
+		<li id='navbar-list'><a href="/" id=navbar-link>Home</a></li>
+		{% if current_user.is_authenticated %}
+		<li id='navbar-list'><a href="/customerProfile" id=navbar-link>Profile</a></li>
+		<li><a href="{{ url_for('logout') }}">Log Out</a></li>
+		{% endif %}
+		{% if not current_user.is_authenticated %}
+		<li id='navbar-list'><a href="/login" id=navbar-link>Login</a></li>
+		<li id='navbar-list'><a href="/newAccount" id=navbar-link>New Account</a></li>
+		{% endif %}
 	</ul>
 	{% block content %} {% endblock content %}
 </body>

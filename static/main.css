@@ -1,11 +1,20 @@
 #navbar {
   list-style-type: none;
+  position: absolute;
+  top:0; 
+  right: 0; 
   margin: 0;
   padding: 0;
-  width: 100px;
+  width: 100%;
   background-color: #f1f1f1;
-  float: right;
+  float: left;
 
+}
+
+li#navbar-list {
+  margin-left: 10%;
+  margin-right: 10%;
+  float: left;
 }
 
 #navbar li a {
@@ -17,7 +26,7 @@
 
 /* Change the link color on hover */
 #navbar li a:hover {
-  background-color: #555;
+  background-color: #6cc1c4;
   color: white;
 }
 
@@ -26,13 +35,13 @@
   color: white;
 }
 
-
 .split {
-  height: 100%;
+  height: 93.9%;
   width: 50%;
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   z-index: -1;
-  top: 0;
+  top: 4%;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -51,9 +60,16 @@
 
 .centered {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.Hcentered {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
   text-align: center;
 }
 
@@ -125,8 +141,6 @@ a#invalid-inputs {
   background-color: #f5817f;
 }
 
-
-
 div#customer-profile-page {
   position:absolute;
   top:35%;
@@ -149,4 +163,21 @@ div#new-favorite-organization-div {
   right:0;
   left:0;
   margin-left: 5%
+}
+
+li#event-holder { 
+  padding: 10px;
+  text-align: left;
+  background-color: #6cc1c4;
+}
+
+li#event-holder:hover { 
+  transition: all .2s ease-in-out;
+  transform: scale(1.05);
+}
+
+img#transparent-logo{
+  position: absolute;
+  bottom: 0.5%;
+  right: 1%;
 }
