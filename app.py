@@ -83,8 +83,7 @@ def login2():
         return render_template("login.html", message="Incorrect password")
     else:
         login_user(user)
-        print("Logged In")
-        return render_template("customerProfile.html")
+        return redirect(url_for("customerProfile"))
 
 
 @app.route("/newAccount")
