@@ -79,7 +79,7 @@ def newAccount2():
         db.session.add(newUser)
         db.session.commit()
         print("Added New User")
-        return render_template("login.html")
+        return render_template("login.html", message="Account has been created!")
     else:
         return render_template("newAccount.html", message="You already have an account!")
 
