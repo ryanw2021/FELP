@@ -10,16 +10,6 @@
     <div class='split right'>
             <div id='new-favorite-organization-div'>
                 <div>
-                <!-- <input autoComplete="on" list="options" id="selected-organization"/> 
-                <div>
-                    Organization Search:<datalist id="options">
-                        {% for organization in organizations %}
-                        <option value={{organization.id}}>{{ organization.title }}</option>
-                        {% endfor %}
-                        <option>first option</option>
-                        <option>Second Option</option>
-                    </datalist> -->
-
                     <select id='organization-selector'>
                             {% for organization in organizations %}
                             <option value={{organization.id}}>{{ organization.title }}</option>
