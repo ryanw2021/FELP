@@ -22,6 +22,9 @@
                         <label>company name</label>
                     </li>                                                                                                               
                 </ul>
+                {% for organization in organizations %}
+                <h1>{{ organization.title }}</h1>
+                {% endfor %}
             </div>
     </div>
     <script src="../static/customerProfile.js"></script>

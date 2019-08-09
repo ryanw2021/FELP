@@ -68,8 +68,8 @@ def newAccount():
 @app.route("/customerProfile")
 def customerProfile():
     user = User.query.filter_by(name="Bob Smith").first()
-    print(user.name)
-    return render_template("customerProfile.html", user=user)
+    organizations = Organization.query.order_by(Organization.title).all()
+    return render_template("customerProfile.html", user=user, organizations=organizations)
 
 if __name__=='__main__':
     app.run(debug=True)
