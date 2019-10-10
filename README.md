@@ -1,40 +1,31 @@
-# Felp Web Application
+# Felp Web Application (Winner of Best Overall Hack)
 
-Felp is a Web App to connect resturants and nonprofit organizations to
-customers in order to raise more moeny for fundraising efforts
+Felp is a Web App that serves as a platform to connect local businesses(currently restaurants) and nonprofit organizations with users in order to help reach fundraising goals for noble causes.
 
 Built on 8-8-19 at Capital One Software Engineering Summit Hackathon
 
-Update: Application no longer works due to termination of database instance on AWS
-
-## Installation
-Felp is currently not deployed so needs to be run locally
-
 ## Usage
-export FLASK_APP=app.py
-flask run
+Update: Application no longer works due to termination of database instance on AWS
+~~ export FLASK_APP=app.py ~~
+~~ flask run ~~
 
-start localhost:5000
+~~ start localhost:5000 ~~
 
 ## Contributors
-Ryan Cohen
-Madeline Kawil
-Iyayi Aiyevbomwan
-Connor Calderon
-Denmar Feliciano
+- Connor Calderon
+- Denmar Feliciano
+- Iyayi Aiyevbomwan
+- Madeline Kawil
+- Ryan Cohen
 
-## Stack
-Python
--Flask
--SQLalchemy
--Jinja2
--postgresql
 
-JavaScript
--HTML
--CSS
+## Built With:
+- Python
+- JavaScript
+- HTML
+- CSS
 
-Amazon Web Services
--Relational Database
-
-Google Maps API
+## Technologies/Services/Platforms Used:
+- Amazon Web Services - For Hosting Relational Database
+Flask - Python Web Framework
+- Google Maps API
