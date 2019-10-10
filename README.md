@@ -1,27 +1,29 @@
-#Felp Web Application
+# Felp Web Application
 
 Felp is a Web App to connect resturants and nonprofit organizations to
 customers in order to raise more moeny for fundraising efforts
 
 Built on 8-8-19 at Capital One Software Engineering Summit Hackathon
 
-##Installation
+Update: Application no longer works due to termination of database instance on AWS
+
+## Installation
 Felp is currently not deployed so needs to be run locally
 
-##Usage
+## Usage
 export FLASK_APP=app.py
 flask run
 
 start localhost:5000
 
-##Contributors
+## Contributors
 Ryan Cohen
 Madeline Kawil
 Iyayi Aiyevbomwan
 Connor Calderon
 Denmar Feliciano
 
-##Stack
+## Stack
 Python
 -Flask
 -SQLalchemy
